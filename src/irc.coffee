@@ -125,6 +125,9 @@ class IrcBot extends Adapter
       nick: process.env.HUBOT_IRC_NICK
       args: [ channel, client, message ]
 
+  getChanData: (channel) ->
+    return @bot.chanData channel
+
   command: (command, strings...) ->
     @bot.send command, strings...
 
